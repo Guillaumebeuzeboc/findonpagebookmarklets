@@ -8,7 +8,7 @@ document.addEventListener("swpfsmod", function (e) {
 	if (e.detail.kw != swpfsmod_curKw) {
 		if (!$('.mark').length)
 			$('html > head').append($('<style>.mark { background-color: yellow; }</style>'));
-		$('*').unmark();
+		//$('*').unmark();
 		$('*').mark(e.detail.kw, {
 			accuracy: swpfsmod_mode,
 			'separateWordSearch': false
