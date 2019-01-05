@@ -39,6 +39,16 @@ document.addEventListener("swpfsmod_back", function (e) {
 	$('mark').eq(swpfsmod_pos).css("background-color", "");
 	swpfsmod_pos--;
 	if ($('mark').eq(swpfsmod_pos).length == 0)
+		swpfsmod_pos = $('mark').length + 1;
+	$('mark').eq(swpfsmod_pos).css("background-color", "orange");
+	$('html, body').animate({
+		scrollTop: $('mark').eq(swpfsmod_pos).offset().top - 100
+	}, 500);
+});
+document.addEventListener("swpfsmod_front", function (e) {
+	$('mark').eq(swpfsmod_pos).css("background-color", "");
+	swpfsmod_pos++;
+	if ($('mark').eq(swpfsmod_pos).length == 0)
 		swpfsmod_pos = $('mark').length - 1;
 	$('mark').eq(swpfsmod_pos).css("background-color", "orange");
 	$('html, body').animate({

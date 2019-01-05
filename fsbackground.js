@@ -19,6 +19,11 @@ browser.runtime.onMessage.addListener(request => {
 			url: 'javascript:/*__previous_occurrence__*/(function(){document.dispatchEvent(new CustomEvent("swpfsmod_back"))})()//8a56585e1a07f0f16c1a096fb81c65e1',
 			parentId: "toolbar_____"
 		})
+		browser.bookmarks.create({
+			title: '▼',
+			url: 'javascript:/*__next_occurrence__*/(function(){document.dispatchEvent(new CustomEvent("swpfsmod_front"))})()//8a56585e1a07f0f16c1a096fb81c65e1',
+			parentId: "toolbar_____"
+		})
 		request.keywords.split(' ').reverse().forEach(kw => {
 			browser.bookmarks.create({
 				title: kw.replace("_swpfsmod_"," "),
